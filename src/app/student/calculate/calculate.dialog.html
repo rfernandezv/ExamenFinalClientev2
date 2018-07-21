@@ -1,0 +1,17 @@
+<div class="container">
+  <h3 mat-dialog-title>Student Information</h3>
+  <div mat-dialog-content>
+    <b>Student code:</b> {{data.studentCode}}
+    <p></p>
+    <b>Name:</b> {{data.firstName}}, {{data.lastName}}    
+    <p></p>
+    <b>Grade:</b> {{data.typeGrade}}
+    <p></p>    
+    <b>Price to pay:</b> {{data.amount}}
+    <p></p>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" class="delete-button" tabindex="-1">Ok</button>
+  </div>
+</div>

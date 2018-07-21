@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+- '8'
+branches:
+  only:
+  - master
+before_script:
+- npm install -g --silent @angular/cli
+script: 
+- ng build --prod
+deploy:
+  provider: cloudfoundry
+  skip_cleanup: true
+  username: 
+   secure: "cAsmFKrhSgBaTvO9yq4zTuJcw29yba5udA2tbPiVj4sLWczEWRE6EoyCwpDYU3TGCUpFLS41IckEkvHgmngyYBnQW2AB/4i5VNiHFwgIFNZwAn0s90IAhEyguICeXu1vBkylsb2X50AaJ2f1JtKvEopaCSaAPx96FMmiS7N73NNLytt/BFAoNacwqAfpH7+Im0gUcmwT0zMQXYP5h7GlJcADDB88W2+T1kXRyK/9ZBQfa2oL096bLntirv3FUBW9cduf+kTN6MsSHEc/aRkxeSQfIRddfxbYRPd+io3pwUTW0RFX5cbqpTvbm1t1nFa8gPF9m5l0YxJ8Hy8OP939huXfoeyPxQxec6Ab82Xgb/Pd8i8X7DMVxC7lpmPWvAzxOP9Zvpm6C41xUZQorYKweKEZrhzoUEeblaJBrEf6mn9vo00eHZLCsLWTOxJ+Vl8B5CUGDmQoZsuW7thtDvPRSh67cVYahZYSZ0uyH8IodRUpTi1W8VrDqVNqVT1F0V1qpTmHlCWiIpLog8NwMFlXxv5NDFi7mAf0ht5JJACOskY3TicK/eJF8qrYc0fnxmx05XbPAa6CcpVwBxQ9JyRFt4thT/ScnmLjBB3FkyfYzozmLcM6PBnGfBDOWuALjqbvHuv/1RhMF5oGackoxjPJmYo76H66wAdhFLI0Jz1K/gg="
+  password:
+   secure: "lYVF3tk6+T5tdUzRmF6DdXjYkC6pP0ybF5y8X1oMjeF1NpQe55fP0ICv78Yamg3h7WivDx3j6QJZ1kSMUfPBjaAw75bjr0GlVnCIS4907ZnGVJ2KoskOG0L2xQiAS2egVefjTIx8qwZMfN4QBr1i60rJJwV23iitVm0rWiUa+RbZW3edPa8J5QuSnJtAcHMDXezlfhWLhrPLUbYm2d3XSUOwk8O6jlHBgQcuPWt9fXsscMF7GZ/tgBjoy19AbZDoib+XTzcSzVsJE2y3CPVhcPEfnZ4GFYScLl6RfmbDxy/hhk52IwOlfZ8R4Tgpo/lkGl62mxRpx7Y7UsXAmRJFllhlzOCzl6+1oetUnbhsKO+t4bt55zKQRJNqVMZKBRbWQnsVWPgalx9sy/ohHdtSpLHd5OXdLg9tkcJGIQvOUMPbVeKwCCo3IAp5Wk64VsuaiyUW5tyI6MpmB5HRzu/V8FOsxfxJBjqk+uw3TWiwHE0gCH0o4+5bJa+hvw7t6V2b1hjvv3Ba0NvBM0epqDtcYXeQzlDNjotLSDvdY6OXDjJhYYo4XzlkAuZHjWMba1hv7euJ8OUh3rj7+xgVtANn8Epvvx0kegGhwyxblYkaNul1MO+Edcx2GhrBqP7FX8SlNDW8T2Yehf0IZOwGhEh5YjhGDG6el1Ax/G7JGDW16s0="
+  api: https://api.run.pivotal.io
+  organization: rfernandezv
+    
+  space: development
+notifications:
+  email:
+    on_failure: change
+    on_success: change
