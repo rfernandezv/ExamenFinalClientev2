@@ -74,7 +74,6 @@ export class ListComponent implements OnInit {
   }
 
   addNew(){
-
   }
 
   calculateAmount(i: number, student : Student) {
