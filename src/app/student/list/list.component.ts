@@ -85,7 +85,7 @@ export class ListComponent implements OnInit {
           data: {studentId: student.studentId, 
                 firstName: student.firstName, 
                 lastName: student.lastName, 
-                amount : student.amount,
+                amount : 0,
                 typeGrade : student.typeGrade,
                 studentCode : student.studentCode            
               }

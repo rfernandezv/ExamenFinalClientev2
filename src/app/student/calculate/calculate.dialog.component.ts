@@ -5,6 +5,7 @@ import {StudentService } from '../../services/student.service';
 import {BlockUI, NgBlockUI } from 'ng-block-ui';
 import {MessageAlertHandleService} from '../../services/message-alert.service';
 import * as HttpStatus from 'http-status-codes'
+import { StudentDto } from '../../models/dto/studentDto';
 
 
 
@@ -17,7 +18,7 @@ export class CalculateDialogComponent implements OnInit {
   @BlockUI() blockUI: NgBlockUI;
 
   constructor(public dialogRef: MatDialogRef<CalculateDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: Student, 
+              @Inject(MAT_DIALOG_DATA) public data: StudentDto, 
               public _messageAlertHandleService: MessageAlertHandleService,
               public _studentService: StudentService) { }
 
