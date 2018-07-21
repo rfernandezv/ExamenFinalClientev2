@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl :'https://examen-rfv-grateful-hyena.cfapps.io/api/'
+  apiUrl :'https://examenv2-grateful-camel.cfapps.io/api/'
 };
