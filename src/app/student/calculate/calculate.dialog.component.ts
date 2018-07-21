@@ -25,7 +25,6 @@ export class CalculateDialogComponent implements OnInit {
   ngOnInit() {
       this.blockUI.start();
       this.calculateAmountStudent(this.data.studentId);
-
   }
 
   calculateAmountStudent(studentId : number) : void{
